@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--suppress ALL -->
+<mapper namespace="com.jy.reflection.biz.repository.board.PostRepository">
+
+	<insert id="save" parameterType="Post" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO TB_POST(TITLE, CONTENT, CREATE_DATE_TIME, CREATOR_IP, UPDATE_DATE_TIME, UPDATER_IP)
+		VALUES (#{title:VARCHAR}, #{content:VARCHAR}, #{createDateTime}, #{creatorIp:VARCHAR}, #{updateDateTime}, #{updaterIp:VARCHAR})
+	</insert>
+
+	<select id="findAll" resultType="Post">
+		SELECT *
+		FROM TB_POST
+	</select>
+
+	<select id="findById" parameterType="Long" resultType="Post">
+		SELECT *
+		FROM TB_POST
+		WHERE ID = #{id}
+	</select>
+
+	<update id="update" parameterType="Post">
+		UPDATE TB_POST
+		SET TITLE = #{title:VARCHAR}, CONTENT = #{content:VARCHAR}, UPDATE_DATE_TIME = #{updateDateTime}, UPDATER_IP = #{updaterIp:VARCHAR}
+		WHERE ID = #{id}
+	</update>
+
+	<delete id="delete" parameterType="Long">
+		DELETE FROM TB_POST
+		WHERE ID = #{id}
+	</delete>
+
+</mapper>
