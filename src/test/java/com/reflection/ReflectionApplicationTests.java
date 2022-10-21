@@ -1,4 +1,4 @@
-package com.jy.reflection;
+package com.reflection;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

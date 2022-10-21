@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--suppress ALL -->
-<mapper namespace="com.jy.reflection.biz.repository.board.PostRepository">
+<mapper namespace="com.reflection.biz.repository.board.PostRepository">
 
 	<insert id="save" parameterType="Post" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO TB_POST(TITLE, CONTENT, CREATE_DATE_TIME, CREATOR_IP, UPDATE_DATE_TIME, UPDATER_IP)

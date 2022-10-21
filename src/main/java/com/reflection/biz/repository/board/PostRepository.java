@@ -1,6 +1,6 @@
-package com.jy.reflection.biz.repository.board;
+package com.reflection.biz.repository.board;
 
-import com.jy.reflection.biz.domain.board.Post;
+import com.reflection.biz.domain.board.Post;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
