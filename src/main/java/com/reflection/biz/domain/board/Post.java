@@ -5,6 +5,8 @@ import com.reflection.biz.domain.BaseVO;
 import com.reflection.biz.domain.Observer;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Post extends BaseVO {
 	private Long id;
@@ -14,4 +16,13 @@ public class Post extends BaseVO {
 
 	@NameValue(name = "내용")
 	private String content;
+
+	@NameValue(name = "개수")
+	private int count;
+
+	@NameValue(name = "자식")
+	private Post child;
+
+	@NameValue(name = "자식들")
+	private List<Post> children;
 }

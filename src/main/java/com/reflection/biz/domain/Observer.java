@@ -8,25 +8,6 @@ import java.util.*;
 
 public class Observer {
 
-//	String getVOInfo(T vo);                         // save, find, delete
-
-//	String getUpdateInfo(T before, T after);        // update
-
-//	String getFindInfo(T vo);
-
-//	String getDeleteInfo(T vo);
-
-//	default String _getInfo(T vo) {
-//		return "";
-//	}
-
-//	default String _getSimpleInfo(T vo) {
-//		return "";
-//	}
-
-	//	default String _getUpdateInfo(T before, T after) {
-//		return "";
-//	}
 	private static final String DIFF_FORMAT = "%s : %s -> %s\n";
 
 	// save, find, delete
@@ -60,6 +41,7 @@ public class Observer {
 
 				if (fieldObject != null) {
 					nameValueMap.put(annotation.name(), fieldObject.toString());
+					// Custom Class, Collection 일 때는 어떻게...? annotation에 타입을 추가해 각 타입에 맞는 value 를 추출?
 				}
 			}
 		});
